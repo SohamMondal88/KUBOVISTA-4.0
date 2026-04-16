@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Kubovista Tours</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">KUBO<span>VISTA</span></a>
+      <button class="btn menu-btn" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="about.html">About</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h1>Plan Your Journey</h1>
+        <span class="kicker">Response within 24 hours</span>
+      </div>
+      <form id="booking-form" class="reveal">
+        <div>
+          <label for="name">Full Name *</label>
+          <input id="name" name="name" required />
+        </div>
+        <div>
+          <label for="email">Email *</label>
+          <input id="email" type="email" name="email" required />
+        </div>
+        <div>
+          <label for="destination">Destination *</label>
+          <select id="destination" name="destination" required>
+            <option value="">Select destination</option>
+            <option>Swiss Alps</option>
+            <option>Bali</option>
+            <option>Iceland</option>
+            <option>Japan</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Travel Preferences</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us about dates, budget, and style."></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send Inquiry</button>
+      </form>
+    </div>
+  </main>
+
+  <footer><div class="container"><p>© <span id="year"></span> Kubovista Tours.</p></div></footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
