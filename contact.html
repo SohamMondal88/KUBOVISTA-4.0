@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Kubovista Tours</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">KUBO<span>VISTA</span></a>
+    <button class="btn menu-btn" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="packages.html">Packages</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container split">
+    <section class="panel reveal">
+      <h1>Plan Your Premium Tour</h1>
+      <p>Share your travel goals and we’ll return a curated route, budget range, and timeline plan within 24 hours.</p>
+
+      <form id="booking-form" class="form-grid">
+        <div class="form-row">
+          <div>
+            <label for="name">Full Name *</label>
+            <input id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Email Address *</label>
+            <input id="email" type="email" name="email" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="destination">Preferred Destination *</label>
+            <select id="destination" name="destination" required>
+              <option value="">Select destination</option>
+              <option>Swiss Alps</option>
+              <option>Bali</option>
+              <option>Iceland</option>
+              <option>Kyoto & Tokyo</option>
+              <option>Dubai</option>
+            </select>
+          </div>
+          <div>
+            <label for="people">Number of Travelers *</label>
+            <input id="people" type="number" min="1" name="people" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="date">Expected Travel Date *</label>
+            <input id="date" type="date" name="date" required />
+          </div>
+          <div>
+            <label for="budget">Budget Range (Optional)</label>
+            <select id="budget" name="budget">
+              <option>Under $2,000</option>
+              <option>$2,000 - $5,000</option>
+              <option>$5,000 - $10,000</option>
+              <option>$10,000+</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="message">Travel Preferences</label>
+          <textarea id="message" rows="4" placeholder="Tell us your preferred style: adventure, wellness, luxury, family activities, etc."></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit Travel Request</button>
+        <div id="form-status" class="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <aside class="panel reveal">
+      <h2>Contact Details</h2>
+      <ul class="list-clean">
+        <li><strong>Email:</strong> concierge@kubovista.com</li>
+        <li><strong>Phone:</strong> +1 (800) 555-0148</li>
+        <li><strong>Hours:</strong> Mon–Sat, 8:00 AM–10:00 PM (UTC)</li>
+        <li><strong>Response SLA:</strong> ≤ 24 hours</li>
+      </ul>
+
+      <h3 style="margin-top:1rem;">Booking FAQs</h3>
+      <div class="accordion-item">
+        <button class="accordion-btn">How soon should I book international tours?</button>
+        <div class="accordion-content"><p>For best hotel rates and visa windows, 6–12 weeks in advance is recommended.</p></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn">Can I request vegetarian/medical preferences?</button>
+        <div class="accordion-content"><p>Yes. Share dietary and accessibility preferences and we’ll include them in your itinerary notes.</p></div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Kubovista Tours.</p>
+  </div>
+</footer>
+
+<button id="back-to-top" class="btn btn-primary back-top" aria-label="Back to top">↑ Top</button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
