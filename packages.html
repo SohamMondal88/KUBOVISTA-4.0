@@ -7,45 +7,115 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">KUBO<span>VISTA</span></a>
-      <button class="btn menu-btn" aria-label="Open menu" aria-expanded="false">Menu</button>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="destinations.html">Destinations</a>
-        <a class="active" href="packages.html">Packages</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">KUBO<span>VISTA</span></a>
+    <button class="btn menu-btn" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="packages.html" class="active">Packages</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h1>Premium Packages For Every Travel Style</h1>
+      <span class="kicker">Estimator + package comparison</span>
     </div>
-  </header>
 
-  <main class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <h1>Premium Tour Packages</h1>
-        <span class="kicker">All-inclusive options</span>
-      </div>
-      <div class="grid">
-        <article class="card reveal" data-tilt><div class="card-content"><h3>Starter Escape</h3><p>4 nights, airport transfer, boutique stay, city discovery tour.</p><div class="meta"><span>Ideal for couples</span><span class="price">$899</span></div></div></article>
-        <article class="card reveal" data-tilt><div class="card-content"><h3>Explorer Plus</h3><p>7 nights, 4 activities, breakfast, intercity mobility pass.</p><div class="meta"><span>Most popular</span><span class="price">$1,790</span></div></div></article>
-        <article class="card reveal" data-tilt><div class="card-content"><h3>Elite Signature</h3><p>10 nights, concierge, private guide, premium dining credits.</p><div class="meta"><span>Luxury pick</span><span class="price">$3,490</span></div></div></article>
-      </div>
-
-      <section class="section">
-        <div class="cta reveal">
-          <div>
-            <h2>Need a custom itinerary?</h2>
-            <p>We optimize your plan by budget, weather, interests, and travel style.</p>
-          </div>
-          <a class="btn btn-primary" href="contact.html">Design My Trip</a>
+    <div class="grid grid-3">
+      <article class="card reveal" data-tilt>
+        <div class="card-body">
+          <h3>Essential Escape</h3>
+          <p>Elegant base package with airport support and guided essentials.</p>
+          <p class="price">$130 / person / night</p>
+          <div class="tag-row"><span class="tag">Starter</span><span class="tag">City Tours</span></div>
         </div>
-      </section>
+      </article>
+      <article class="card reveal" data-tilt>
+        <div class="card-body">
+          <h3>Explorer Plus <span class="badge">Popular</span></h3>
+          <p>Balanced experience with premium excursions and mobility passes.</p>
+          <p class="price">$210 / person / night</p>
+          <div class="tag-row"><span class="tag">Most Booked</span><span class="tag">Comfort+</span></div>
+        </div>
+      </article>
+      <article class="card reveal" data-tilt>
+        <div class="card-body">
+          <h3>Signature Elite</h3>
+          <p>Top-tier private experiences with concierge and VIP movement.</p>
+          <p class="price">$390 / person / night</p>
+          <div class="tag-row"><span class="tag">Luxury</span><span class="tag">Private Guide</span></div>
+        </div>
+      </article>
     </div>
-  </main>
 
-  <footer><div class="container"><p>© <span id="year"></span> Kubovista Tours.</p></div></footer>
-  <script src="assets/js/main.js"></script>
+    <section class="section split">
+      <article class="panel reveal">
+        <h2>Quick Cost Estimator</h2>
+        <p>Choose package settings to get an immediate estimated total.</p>
+
+        <form id="estimator-form" class="form-grid">
+          <div>
+            <label for="tier">Package Tier</label>
+            <select id="tier" required>
+              <option value="">Select package</option>
+              <option value="130">Essential Escape — $130</option>
+              <option value="210">Explorer Plus — $210</option>
+              <option value="390">Signature Elite — $390</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="travelers">Travelers</label>
+              <input id="travelers" type="number" min="1" value="2" required />
+            </div>
+            <div>
+              <label for="nights">Nights</label>
+              <input id="nights" type="number" min="1" value="5" required />
+            </div>
+          </div>
+          <label><input id="insurance" type="checkbox" style="width:auto; margin-right:.4rem;" /> Add travel insurance ($120 total)</label>
+          <button class="btn btn-primary" type="submit">Calculate Estimate</button>
+          <div id="estimate-result" class="status" aria-live="polite"></div>
+        </form>
+      </article>
+
+      <article class="panel reveal">
+        <h2>Package Comparison Table</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Essential</th>
+              <th>Explorer</th>
+              <th>Elite</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Airport Transfers</td><td>Shared</td><td>Private</td><td>VIP Private</td></tr>
+            <tr><td>Hotel Category</td><td>4 Star</td><td>4/5 Star</td><td>5 Star+</td></tr>
+            <tr><td>Guided Experiences</td><td>2</td><td>4</td><td>Unlimited Curated</td></tr>
+            <tr><td>Concierge</td><td>Email</td><td>Priority Chat</td><td>24/7 Dedicated</td></tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Kubovista Tours.</p>
+  </div>
+</footer>
+
+<button id="back-to-top" class="btn btn-primary back-top" aria-label="Back to top">↑ Top</button>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
