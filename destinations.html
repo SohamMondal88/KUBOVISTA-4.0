@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinations | Kubovista Tours</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">KUBO<span>VISTA</span></a>
+    <button class="btn menu-btn" aria-expanded="false" aria-label="Toggle menu">Menu</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="destinations.html" class="active">Destinations</a>
+      <a href="packages.html">Packages</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h1>Explore Premium Destinations</h1>
+      <span class="kicker">Smart filters + destination search</span>
+    </div>
+
+    <div class="panel reveal" style="margin-bottom:1rem;">
+      <label for="destination-search">Search destination by name or experience</label>
+      <input id="destination-search" placeholder="Type: aurora, safari, islands, wellness..." />
+
+      <div class="filters">
+        <button class="filter-btn active" data-region="all">All</button>
+        <button class="filter-btn" data-region="europe">Europe</button>
+        <button class="filter-btn" data-region="asia">Asia</button>
+        <button class="filter-btn" data-region="middle-east">Middle East</button>
+        <button class="filter-btn" data-region="africa">Africa</button>
+      </div>
+    </div>
+
+    <div id="destination-grid" class="grid grid-3">
+      <article class="card reveal" data-tilt data-region="europe">
+        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1200&q=80" alt="Santorini" />
+        <div class="card-body"><h3>Santorini, Greece</h3><p>Caldera sunsets, cave suites, private catamaran experiences.</p><p class="price">Best season: Apr–Oct</p></div>
+      </article>
+      <article class="card reveal" data-tilt data-region="europe">
+        <img src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?auto=format&fit=crop&w=1200&q=80" alt="Norway" />
+        <div class="card-body"><h3>Norway Fjords</h3><p>Scenic rail lines, fjord cruises, and arctic panoramas.</p><p class="price">Best season: May–Sep</p></div>
+      </article>
+      <article class="card reveal" data-tilt data-region="asia">
+        <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=1200&q=80" alt="Japan" />
+        <div class="card-body"><h3>Kyoto & Tokyo, Japan</h3><p>Cherry blossom culture, modern city luxury, food trails.</p><p class="price">Best season: Mar–May</p></div>
+      </article>
+      <article class="card reveal" data-tilt data-region="asia">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Maldives" />
+        <div class="card-body"><h3>Maldives</h3><p>Overwater villas, diving adventures, and island relaxation.</p><p class="price">Best season: Nov–Apr</p></div>
+      </article>
+      <article class="card reveal" data-tilt data-region="middle-east">
+        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1200&q=80" alt="Dubai" />
+        <div class="card-body"><h3>Dubai, UAE</h3><p>Skyline luxury, desert escapes, and premium shopping routes.</p><p class="price">Best season: Nov–Mar</p></div>
+      </article>
+      <article class="card reveal" data-tilt data-region="africa">
+        <img src="https://images.unsplash.com/photo-1505765050516-f72dcac9c60f?auto=format&fit=crop&w=1200&q=80" alt="Kenya" />
+        <div class="card-body"><h3>Masai Mara, Kenya</h3><p>Signature safari drives, luxury lodges, wildlife photography.</p><p class="price">Best season: Jul–Oct</p></div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Kubovista Tours.</p>
+  </div>
+</footer>
+
+<button id="back-to-top" class="btn btn-primary back-top" aria-label="Back to top">↑ Top</button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
